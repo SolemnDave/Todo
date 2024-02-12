@@ -14,11 +14,6 @@
       "id": 3,
       "task": "Collect Tickets",
       "complete": false
-    },
-    {
-      "id": 4,
-      "task": "Call Joe",
-      "complete": true
     }
   ]
 }
