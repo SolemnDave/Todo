@@ -1,0 +1,56 @@
+An enum (short for enumeration) in TypeScript is a feature that allows you to define a set of named constants, either numeric or string-based. 
+
+Enums are used to give more friendly names to sets of numeric or string values, improve code readability, and reduce the chance of errors 
+from using incorrect or typos in strings or numbers.
+
+Enums define a way to group related values together under a single name. This can make your code more descriptive and easier to maintain.
+
+Numeric Enums
+By default, enums in TypeScript are numeric. Each member of a numeric enum is assigned a number, starting from zero, and incrementing 
+by one for each subsequent member. You can also manually set the value of enum members.
+
+enum Days {
+  Sunday,    // 0
+  Monday,    // 1
+  Tuesday,   // 2
+  Wednesday, // 3
+  Thursday,  // 4
+  Friday,    // 5
+  Saturday   // 6
+}
+
+
+String Enums
+TypeScript also supports string-based enums. String enums allow you to give each member a string value. String enums provide better 
+readability and debuggability since the enum values are meaningful strings at runtime.
+
+enum Directions {
+  Up = "UP",
+  Down = "DOWN",
+  Left = "LEFT",
+  Right = "RIGHT"
+}
+
+
+Example Use Case in TypeScript
+Consider an application where you're handling user roles with specific permissions:
+
+typescript
+Copy code
+enum UserRole {
+  Admin = "ADMIN",
+  Editor = "EDITOR",
+  Viewer = "VIEWER"
+}
+
+function checkAccess(userRole: UserRole) {
+  if (userRole === UserRole.Admin) {
+    console.log("Full access granted.");
+  } else if (userRole === UserRole.Editor) {
+    console.log("Partial access granted.");
+  } else {
+    console.log("View access only.");
+  }
+}
+
+checkAccess(UserRole.Editor); // Output: "Partial access granted."

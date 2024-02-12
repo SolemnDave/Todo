@@ -1,0 +1,41 @@
+A constructor is a special method in a class that is automatically called when a new instance of the class is created. 
+It's primarily used for initializing objects with specific initial values or to execute any setup procedures required for the object.
+
+Purpose of a Constructor
+
+Initialization: The primary purpose of a constructor is to initialize the new object's properties. 
+When you create a new instance of a class, the constructor sets the initial state of the object by assigning values to its properties.
+
+Parameter Acceptance: Constructors can accept parameters, allowing you to provide initial values for an object's properties or perform other 
+setup tasks when the object is created.
+
+Setup Operations: Apart from initializing properties, constructors can also include any code necessary for setting up the object, 
+such as establishing connections, initializing default values, or any other preparatory steps.
+
+Characteristics of a Constructor
+Automatic Invocation: Constructors are automatically called when a new instance of a class is created using the new keyword. 
+You don’t call the constructor method explicitly.
+
+No Return Type: In TypeScript and JavaScript, constructors do not return a value. They are used solely for initialization.
+
+Name: The constructor method has a specific name, constructor, in TypeScript and JavaScript.
+
+
+class Person {
+  name: string;
+  age: number;
+
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
+let person = new Person("Alice", 30);
+
+
+In this example:
+
+The Person class has a constructor that accepts name and age parameters.
+Inside the constructor, this.name and this.age set the properties of the Person instance.
+When a new Person instance is created with new Person("Alice", 30), the constructor is automatically called, setting the name to "Alice" and the age to 30.

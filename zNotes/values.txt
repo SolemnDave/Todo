@@ -1,0 +1,27 @@
+The values() method is a part of JavaScript's Map object prototype, and it plays a key role in your code.
+
+The values() Method in JavaScript
+
+Purpose: 
+The values() method returns a new iterator object that contains the values for each element in a Map object in insertion order. 
+The Map object in JavaScript is a collection of key-value pairs, and values() helps you access just the values, ignoring the keys.
+
+Return Type: 
+The iterator returned by values() can be used to loop through the values in the Map. 
+It does not return an array directly, but the values can be iterated over or converted into an array using the spread operator (...) or other methods like Array.from().
+
+
+Usage in Your Code
+In the getTodoItems method of the TodoCollection class:
+
+typescript
+Copy code
+getTodoItems(includeComplete: boolean): TodoItem[] {
+  return [...this.itemMap.values()].filter(
+    (item) => includeComplete || !item.complete
+  );
+}
+this.itemMap.values(): This part of the code calls the values() method on this.itemMap, which is a Map<number, TodoItem>. The values() method here returns an iterator of TodoItem objects.
+
+[...this.itemMap.values()]: The spread operator ... is used to convert the iterator into an array of TodoItem objects. This is necessary because the filter method is an array method and cannot be directly used on an iterator.
+

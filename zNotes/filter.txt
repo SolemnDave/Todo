@@ -1,0 +1,37 @@
+The filter method in JavaScript is an array method used to create a new array filled with elements that pass a test provided by a given function.
+
+Understanding the filter Method
+
+Basic Usage: 
+The filter method takes a callback function as an argument. This callback function is called once for each element in the array. 
+If the callback function returns true for an element, that element is included in the new array.
+
+Callback Function: 
+The callback function can take three parameters: the current element (element), the index of the current element (index), and the array being processed (array). Most commonly, only the element is used.
+
+Immutability: 
+The original array is not modified. Instead, filter returns a new array.
+
+
+Usage in Code
+In the TodoCollection class, the filter method is used in the getTodoItems method:
+
+typescript
+Copy code
+getTodoItems(includeComplete: boolean): TodoItem[] {
+  return [...this.itemMap.values()].filter(
+    (item) => includeComplete || !item.complete
+  );
+}
+Here's the breakdown:
+
+...this.itemMap.values(): This part, spreads the values of the itemMap (which are TodoItem objects) into a new array.
+
+.filter(...): This is where the filter method is applied to the new array of TodoItem objects.
+
+(item) => includeComplete || !item.complete: This is the callback function passed to filter. It's written as an arrow function for brevity. 
+The function takes each item (a TodoItem object) and checks the condition:
+
+If includeComplete is true, the callback function returns true for all items, meaning all items will be included in the resulting array.
+If includeComplete is false, the callback function returns true only for items where item.complete is false (meaning incomplete tasks). 
+In other words, only incomplete tasks are included in the resulting array.

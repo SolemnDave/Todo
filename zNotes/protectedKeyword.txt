@@ -1,0 +1,1 @@
+The protected keyword tell the TypeScirpt compiler that a property can be accessed only by a class or its subclasses.

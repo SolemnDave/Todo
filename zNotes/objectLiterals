@@ -1,0 +1,16 @@
+Object Literals in JavaScript/TypeScript
+Object Literals: 
+In JavaScript and TypeScript, an object literal is a way to create an object. It's a list of key-value pairs enclosed in curly braces {}. 
+Each key-value pair is a property of the object, where the key is the property name (usually a string), and the value can be anything: a number, a string, a boolean, another object, a function, etc.
+
+For example:
+
+javascript
+Copy code
+let person = {
+  name: "Alice",
+  age: 30,
+  isStudent: false
+};
+
+Here, person is an object with three properties: name, age, and isStudent.

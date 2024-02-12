@@ -1,0 +1,18 @@
+In JavaScript, => is known as the arrow function expression (or arrow function, for short). It's a shorter syntax for writing functions and was introduced in ES6 (ECMAScript 2015), 
+a major update to JavaScript's language standard. Arrow functions provide a concise way to write function expressions and have some differences from traditional function expressions.
+
+For example:
+
+const add = (a, b) => a + b;
+
+Here, add is a function that takes two parameters a and b and returns their sum.
+
+Key Characteristics of Arrow Functions
+Conciseness: 
+Arrow functions allow for shorter function syntax.
+
+this Behavior: 
+Unlike regular functions, arrow functions do not have their own this. The value of this inside an arrow function is the same as the value of this outside the function. This is particularly useful in certain scenarios where you want to access the this context of the surrounding code.
+
+Implicit Return: 
+If the function body consists of a single expression, you don’t need to write return — the function implicitly returns the value of that expression.

@@ -1,0 +1,22 @@
+Shape Types in TypeScript
+Shape Types: 
+When we talk about the "shape" of an object in TypeScript, we're referring to the structure of that object – specifically, what properties it has and what types those properties are. 
+TypeScript is concerned with ensuring that the objects you use match the expected shape.
+
+In the person example above, the shape of the person object can be described as an object with:
+
+A name property of type string.
+An age property of type number.
+An isStudent property of type boolean.
+Shape Type: A "shape type" is a specific combination of property names and their corresponding types. In TypeScript, this is often defined using an interface or a type alias. This definition ensures that any object of this shape type has the same structure.
+
+Here's how you might define the shape type for our person object in TypeScript:
+
+typescript
+Copy code
+interface Person {
+  name: string;
+  age: number;
+  isStudent: boolean;
+}
+This Person interface is a shape type. It specifies that any Person object must have a name property of type string, an age property of type number, and an isStudent property of type boolean.
